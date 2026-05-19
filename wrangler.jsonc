@@ -1,0 +1,7 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Replace this with the final Cloudflare Pages project name in the owner's account.
+  "name": "azoe-afh-site",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-05-19"
+}
