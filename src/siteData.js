@@ -82,6 +82,29 @@ export const aboutHomePoints = [
   },
 ]
 
+export const houseGallery = [
+  {
+    title: 'Front of the home',
+    imageSrc: '/house/front-exterior.jpg',
+    alt: 'Exterior view of the AZOE Adult Family Home',
+  },
+  {
+    title: 'Resident bedroom',
+    imageSrc: '/house/resident-bedroom.jpg',
+    alt: 'Resident bedroom inside the AZOE Adult Family Home',
+  },
+  {
+    title: 'Accessible bathroom',
+    imageSrc: '/house/accessible-bathroom.jpg',
+    alt: 'Accessible bathroom inside the AZOE Adult Family Home',
+  },
+  {
+    title: 'Dining and kitchen area',
+    imageSrc: '/house/dining-kitchen.jpg',
+    alt: 'Dining and kitchen area inside the AZOE Adult Family Home',
+  },
+]
+
 export const missionHighlights = [
   'Assurance of quality care',
   'Zeal in service',
@@ -154,6 +177,7 @@ export const faqs = [
 export const navLinks = [
   { href: '#care', label: 'Care' },
   { href: '#home', label: 'Home' },
+  { href: '#house-photos', label: 'Photos' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
 ]

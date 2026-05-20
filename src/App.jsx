@@ -3,6 +3,7 @@ import {
   aboutHomePoints,
   contact,
   faqs,
+  houseGallery,
   homeDetails,
   missionHighlights,
   navLinks,
@@ -95,6 +96,12 @@ function App() {
                 care, transportation assistance, community integration, and respite
                 care for family caregivers.
               </div>
+
+              <div className="hero-contact-inline" aria-label="Quick contact details">
+                <a href={contact.primaryPhoneHref}>{contact.primaryPhone}</a>
+                <span aria-hidden="true">•</span>
+                <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              </div>
             </div>
           </div>
         </section>
@@ -174,6 +181,29 @@ function App() {
                   </article>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section photo-section" id="house-photos">
+          <div className="container">
+            <SectionHeading
+              eyebrow="House photos"
+            />
+
+            <div className="photo-grid">
+              {houseGallery.map((photo) => (
+                <article key={photo.title} className="photo-card">
+                  {photo.imageSrc ? (
+                    <img className="gallery-image" src={photo.imageSrc} alt={photo.alt} />
+                  ) : (
+                    <div className="photo-placeholder" aria-hidden="true">
+                      Add house photo here
+                    </div>
+                  )}
+                  <h3 className="photo-label">{photo.title}</h3>
+                </article>
+              ))}
             </div>
           </div>
         </section>

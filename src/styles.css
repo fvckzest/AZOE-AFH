@@ -25,6 +25,7 @@ html {
 
 #care,
 #home,
+#house-photos,
 #faq,
 #contact {
   scroll-margin-top: 6.5rem;
@@ -414,6 +415,22 @@ summary {
   background: rgba(239, 248, 253, 0.82);
 }
 
+.hero-contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.hero-contact-inline a:hover,
+.hero-contact-inline a:focus-visible {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
 .section {
   padding: 1.25rem 0;
 }
@@ -516,16 +533,37 @@ summary {
 
 .photo-card {
   overflow: hidden;
+  display: grid;
+  gap: 0;
+  position: relative;
 }
 
 .photo-card .photo-placeholder {
   min-height: 180px;
 }
 
+.photo-label {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(31, 51, 68, 0.58);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 18px rgba(20, 37, 49, 0.14);
+}
+
 .mission-card {
   display: grid;
   gap: 1rem;
-  background: linear-gradient(135deg, rgba(247, 252, 255, 0.96), rgba(191, 232, 218, 0.78));
+  background: linear-gradient(135deg, rgba(247, 252, 255, 0.96), rgba(191, 232, 218, 0.63));
 }
 
 .details-panel {
@@ -594,7 +632,7 @@ summary {
 .reassurance-banner {
   display: grid;
   gap: 1rem;
-  background: linear-gradient(135deg, rgba(247, 252, 255, 0.96), rgba(191, 232, 218, 0.78));
+  background: linear-gradient(135deg, rgba(247, 252, 255, 0.96), rgba(191, 232, 218, 0.63));
 }
 
 .faq-list {
