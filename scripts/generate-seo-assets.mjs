@@ -50,18 +50,25 @@ async function createSquareLogo(size, outputPath) {
 async function createOgImage() {
   const width = 1200
   const height = 630
+  const logoLeft = 92
+  const logoTop = 138
   const logo = await sharp(sourceLogo)
     .resize(290, 420, {
-      fit: 'contain',
+      fit: 'inside',
       withoutEnlargement: true,
     })
     .png()
     .toBuffer()
 
-  const overlay = Buffer.from(`
+  const backgroundOverlay = Buffer.from(`
     <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="${width}" height="${height}" rx="0" fill="${brandBackground}" />
       <rect x="52" y="52" width="${width - 104}" height="${height - 104}" rx="28" fill="#fbf7f1" stroke="#dfd5c7" />
+    </svg>
+  `)
+
+  const foregroundOverlay = Buffer.from(`
+    <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="418" y="116" width="2" height="398" fill="#dfd5c7" />
       <text x="472" y="210" fill="${brandAccent}" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="700">
         <tspan x="472" dy="0">AZOE Adult</tspan>
@@ -87,12 +94,15 @@ async function createOgImage() {
   })
     .composite([
       {
-        input: logo,
-        left: 92,
-        top: 105,
+        input: backgroundOverlay,
       },
       {
-        input: overlay,
+        input: logo,
+        left: logoLeft,
+        top: logoTop,
+      },
+      {
+        input: foregroundOverlay,
       },
     ])
     .png()

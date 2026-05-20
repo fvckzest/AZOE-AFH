@@ -4,7 +4,7 @@ import { buildStructuredData } from './src/seo.js'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
-  const siteUrl = (env.VITE_SITE_URL || 'https://azoe-afh-site.pages.dev').replace(/\/+$/, '')
+  const siteUrl = (env.VITE_SITE_URL || 'https://azoeafh.com').replace(/\/+$/, '')
   const jsonLd = buildStructuredData(siteUrl)
     .map(
       (item) =>

@@ -1,7 +1,7 @@
 import { contact, faqs, services } from './siteData'
 
 export const siteName = 'AZOE Adult Family Home'
-export const defaultSiteUrl = 'https://azoe-afh-site.pages.dev'
+export const defaultSiteUrl = 'https://azoeafh.com'
 export const siteTitle =
   'AZOE Adult Family Home | Personalized Senior Care in Lacey, WA'
 export const siteDescription =

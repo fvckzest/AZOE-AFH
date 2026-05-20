@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 
-const defaultSiteUrl = 'https://azoe-afh-site.pages.dev'
+const defaultSiteUrl = 'https://azoeafh.com'
 const siteUrl = (process.env.VITE_SITE_URL || defaultSiteUrl).replace(/\/+$/, '')
 const publicDir = path.join(process.cwd(), 'public')
 
