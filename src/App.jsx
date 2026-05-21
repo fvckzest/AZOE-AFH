@@ -9,7 +9,6 @@ import {
   navLinks,
   services,
   smallerHomeBenefits,
-  specialties,
 } from './siteData'
 
 function SectionHeading({ eyebrow, title, copy }) {
@@ -217,16 +216,6 @@ function App() {
             />
 
             <div className="details-layout">
-              <article className="details-panel">
-                <p className="eyebrow">Specialty</p>
-                <h3>Focused support for residents with more specialized care needs</h3>
-                <ul className="feature-list">
-                  {specialties.map((specialty) => (
-                    <li key={specialty}>{specialty}</li>
-                  ))}
-                </ul>
-              </article>
-
               <div className="card-grid details-grid">
                 {homeDetails.map((detail) => (
                   <article key={detail.title} className="info-card">
@@ -320,6 +309,10 @@ function App() {
                   <p>
                     <a href={contact.primaryPhoneHref}>{contact.primaryPhone}</a>
                   </p>
+                  <p>
+                    <a href={contact.secondaryPhoneHref}>{contact.secondaryPhone}</a>
+                  </p>
+                  <p>Fax: {contact.fax}</p>
                   <h3>Email</h3>
                   <p>
                     <a href={`mailto:${contact.email}`}>{contact.email}</a>
@@ -330,7 +323,8 @@ function App() {
                   <h3>Location</h3>
                   <p>{contact.addressLine1}</p>
                   <p>{contact.addressLine2}</p>
-                  <p>License #{contact.licenseNumber}</p>
+                  <h3>License</h3>
+                  <p>#{contact.licenseNumber}</p>
                 </div>
               </article>
             </div>

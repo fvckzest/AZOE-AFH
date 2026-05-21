@@ -1,6 +1,9 @@
 export const contact = {
   primaryPhone: '360-688-6609',
   primaryPhoneHref: 'tel:+13606886609',
+  secondaryPhone: '360-915-9459',
+  secondaryPhoneHref: 'tel:+13609159459',
+  fax: '844-348-2316',
   email: 'azoe6609@gmail.com',
   addressLine1: '5459 Strawberry Ct SE',
   addressLine2: 'Lacey, WA 98513',

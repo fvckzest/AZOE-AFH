@@ -12,7 +12,7 @@ const appleTouchIconPath = path.join(publicDir, 'apple-touch-icon.png')
 const android192Path = path.join(publicDir, 'android-chrome-192x192.png')
 const android512Path = path.join(publicDir, 'android-chrome-512x512.png')
 
-const brandBackground = '#f5efe6'
+const brandBackground = '#f8f4ee'
 const brandAccent = '#28433b'
 const brandMuted = '#5d6f68'
 
@@ -63,7 +63,7 @@ async function createOgImage() {
   const backgroundOverlay = Buffer.from(`
     <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="${width}" height="${height}" rx="0" fill="${brandBackground}" />
-      <rect x="52" y="52" width="${width - 104}" height="${height - 104}" rx="28" fill="#fbf7f1" stroke="#dfd5c7" />
+      <rect x="52" y="52" width="${width - 104}" height="${height - 104}" rx="28" fill="#fdfaf6" stroke="#e5dbcd" />
     </svg>
   `)
 

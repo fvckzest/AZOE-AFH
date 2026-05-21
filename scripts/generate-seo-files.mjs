@@ -28,8 +28,8 @@ const manifest = {
     'Personalized senior care, medication support, dementia support, and respite care in Lacey, Washington.',
   start_url: '/',
   display: 'standalone',
-  background_color: '#f5efe6',
-  theme_color: '#f5efe6',
+  background_color: '#f1f2f1',
+  theme_color: '#f1f2f1',
   icons: [
     {
       src: '/android-chrome-192x192.png',
