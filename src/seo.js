@@ -5,11 +5,11 @@ export const defaultSiteUrl = 'https://azoeafh.com'
 export const siteTitle =
   'AZOE Adult Family Home | Personalized Senior Care in Lacey, WA'
 export const siteDescription =
-  'AZOE Adult Family Home provides personalized senior care, medication support, dementia support, and respite care in a calm residential setting in Lacey, Washington.'
+  'AZOE Adult Family Home provides personalized senior care, meal preparation, 24/7 care, medication support, dementia support, and respite care in a calm residential setting in Lacey, Washington.'
 export const previewTitle =
   'Personalized senior care in a warm Lacey, Washington home'
 export const previewDescription =
-  'Explore AZOE Adult Family Home for personal care, medication support, dementia support, transportation help, and respite care in a smaller residential setting.'
+  'Explore AZOE Adult Family Home for personal care, meal preparation, 24/7 care, medication support, dementia support, transportation help, and respite care in a smaller residential setting.'
 export const socialImagePath = '/og-image.png'
 export const squareLogoPath = '/logo-square-512.png'
 

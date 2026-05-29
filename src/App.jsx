@@ -1,5 +1,18 @@
 import { useState } from 'react'
 import {
+  Brain,
+  CarFront,
+  ClipboardPlus,
+  Clock3,
+  HandHeart,
+  HeartHandshake,
+  HousePlus,
+  Puzzle,
+  Repeat2,
+  UsersRound,
+  Utensils,
+} from 'lucide-react'
+import {
   aboutHomePoints,
   contact,
   faqs,
@@ -18,6 +31,30 @@ function SectionHeading({ eyebrow, title, copy }) {
       <h2>{title}</h2>
       {copy ? <p className="section-copy">{copy}</p> : null}
     </div>
+  )
+}
+
+const serviceIcons = {
+  'Personal care assistance': HeartHandshake,
+  'Medication management and doctor’s appointments': ClipboardPlus,
+  'Meal preparation': Utensils,
+  '24/7 care and supervision': Clock3,
+  'Encouraging socialization and community integration': UsersRound,
+  'Housekeeping and errands': HousePlus,
+  'Transportation assistance': CarFront,
+  'Respite care for family caregivers': Repeat2,
+  'Support for mental health needs': HandHeart,
+  'Dementia support': Brain,
+  'Developmental disabilities support': Puzzle,
+}
+
+function ServiceIcon({ title }) {
+  const Icon = serviceIcons[title] || HandHeart
+
+  return (
+    <span className="service-icon" aria-hidden="true">
+      <Icon />
+    </span>
   )
 }
 
@@ -75,8 +112,8 @@ function App() {
                   <h1>Personalized Adult Family Home Care in a Warm Residential Setting</h1>
                   <p className="hero-text">
                     AZOE Adult Family Home provides personal care assistance, medication
-                    support, daily structure, and a calm place that feels like home in
-                    Lacey, Washington.
+                    support, meal preparation, 24/7 care, and a calm place that feels
+                    like home in Lacey, Washington.
                   </p>
                 </div>
               </div>
@@ -90,12 +127,6 @@ function App() {
                 </a>
               </div>
 
-              <div className="hero-note">
-                Led by {contact.provider}, with support that may include personal
-                care, transportation assistance, community integration, and respite
-                care for family caregivers.
-              </div>
-
               <div className="hero-contact-inline" aria-label="Quick contact details">
                 <a href={contact.primaryPhoneHref}>{contact.primaryPhone}</a>
                 <span aria-hidden="true">•</span>
@@ -106,12 +137,31 @@ function App() {
         </section>
 
         <section className="section intro-section">
-          <div className="container intro-card">
-            <SectionHeading
-              eyebrow="A human approach"
-              title="Choosing care for a loved one can feel overwhelming."
-              copy="The goal at AZOE is to make that decision feel clearer, safer, and more human. Families deserve honest conversations, compassionate guidance, and a place where their loved one can feel known, cared for, and supported in a peaceful residential setting."
-            />
+          <div className="container intro-stack">
+            <div className="intro-card">
+              <SectionHeading
+                eyebrow="A human approach"
+                title="Choosing care for a loved one can feel overwhelming."
+                copy="The goal at AZOE is to make that decision feel clearer, safer, and more human. Families deserve honest conversations, compassionate guidance, and a place where their loved one can feel known, cared for, and supported in a peaceful residential setting."
+              />
+            </div>
+
+            <article className="provider-card">
+              <div className="provider-copy">
+                <p className="eyebrow">Led by</p>
+                <h3>{contact.provider}</h3>
+                <p>
+                  Support may include personal
+                  care, transportation assistance, community integration, and respite
+                  care for family caregivers.
+                </p>
+              </div>
+              <img
+                className="provider-photo"
+                src="/hellen.png"
+                alt="Hellen Mwanzia smiling at a table"
+              />
+            </article>
           </div>
         </section>
 
@@ -125,6 +175,7 @@ function App() {
             <div className="card-grid services-grid">
               {services.map((service) => (
                 <article key={service.title} className="info-card service-card">
+                  <ServiceIcon title={service.title} />
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </article>

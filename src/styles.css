@@ -241,6 +241,7 @@ textarea {
 .hero-copy,
 .hero-media,
 .intro-card,
+.provider-card,
 .info-card,
 .photo-card,
 .reassurance-banner,
@@ -319,7 +320,7 @@ summary {
 .section-copy,
 .intro-card p,
 .info-card p,
-.hero-note,
+.provider-copy p,
 .site-footer p,
 .faq-item p,
 .reassurance-banner p,
@@ -409,10 +410,42 @@ summary {
   min-height: 360px;
 }
 
-.hero-note {
+.intro-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.provider-card {
+  display: grid;
+  gap: 1rem;
+  overflow: hidden;
   padding: 1rem;
-  border-radius: var(--radius-sm);
-  background: rgba(239, 248, 253, 0.82);
+  background: linear-gradient(135deg, rgba(247, 252, 255, 0.96), rgba(216, 229, 221, 0.48));
+}
+
+.provider-copy {
+  align-self: center;
+  padding: 0.35rem;
+}
+
+.provider-copy h3 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.35rem, 4vw, 2rem);
+}
+
+.provider-copy p:last-child {
+  margin: 0;
+}
+
+.provider-photo {
+  width: auto;
+  max-width: 100%;
+  height: clamp(220px, 28vw, 320px);
+  object-fit: contain;
+  justify-self: center;
+  border-radius: calc(var(--radius) - 8px);
+  border: 1px solid rgba(57, 102, 137, 0.16);
+  background: #fff;
 }
 
 .hero-contact-inline {
@@ -472,6 +505,35 @@ summary {
 .photo-card,
 .info-panel {
   padding: 1.2rem;
+}
+
+.service-card {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  text-align: center;
+}
+
+.service-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  color: var(--accent-dark);
+  background: linear-gradient(135deg, rgba(216, 229, 221, 0.86), rgba(248, 252, 255, 0.95));
+  border: 1px solid rgba(57, 102, 137, 0.13);
+}
+
+.service-icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .info-card h3,
@@ -743,6 +805,12 @@ summary {
 
   .photo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .provider-card {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.9fr);
+    align-items: stretch;
+    padding: 1.2rem;
   }
 
   .about-points {

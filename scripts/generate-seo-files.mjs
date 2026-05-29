@@ -25,7 +25,7 @@ const manifest = {
   name: 'AZOE Adult Family Home',
   short_name: 'AZOE AFH',
   description:
-    'Personalized senior care, medication support, dementia support, and respite care in Lacey, Washington.',
+    'Personalized senior care, meal preparation, 24/7 care, medication support, dementia support, and respite care in Lacey, Washington.',
   start_url: '/',
   display: 'standalone',
   background_color: '#f1f2f1',

@@ -23,6 +23,16 @@ export const services = [
       'Residents receive help staying on schedule with medications and practical support around medical appointments and ongoing care coordination.',
   },
   {
+    title: 'Meal preparation',
+    description:
+      'Nutritious meals and daily meal routines are prepared in the home, helping residents feel cared for, comfortable, and supported throughout the day.',
+  },
+  {
+    title: '24/7 care and supervision',
+    description:
+      'Around-the-clock care and supervision help residents and families feel reassured that support is available day and night.',
+  },
+  {
     title: 'Encouraging socialization and community integration',
     description:
       'Daily life includes conversation, companionship, and opportunities to stay connected to familiar routines, relationships, and community activities.',
@@ -130,7 +140,7 @@ export const homeDetails = [
   {
     title: 'Residential accommodations',
     description:
-      'The home offers a private room and a smaller 6-bed setting that can feel steadier, quieter, and more personal.',
+      'The home offers a smaller 6-bed setting that can feel steadier, quieter, and more personal. Families can call or email to ask about current bed availability.',
   },
   {
     title: 'Language support',
@@ -158,7 +168,12 @@ export const faqs = [
   {
     question: 'What kind of care do you provide?',
     answer:
-      'Support may include help with daily living, meals, routines, supervision, companionship, and communication with family, depending on each resident’s needs.',
+      'Support may include help with daily living, meal preparation, routines, 24/7 care and supervision, companionship, and communication with family, depending on each resident’s needs.',
+  },
+  {
+    question: 'How many beds does the home have?',
+    answer:
+      'AZOE is a smaller six-bed adult family home. Beds are currently available.',
   },
   {
     question: 'Do you offer memory care?',
